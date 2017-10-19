@@ -11,6 +11,20 @@
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve"
   },
+  "main": "electron/electron.js",
+  "config": {
+    "ionic_bundler": "webpack",
+    "ionic_webpack": "./config/webpack.config.js"
+  },
+  "build": {
+    "appId": "com.lohanitech.ionic-electron-test",
+    "electronVersion": "1.7.5",
+    "asar":false,
+    "files": [
+      "www/**/*",
+      "electron/*"
+    ]
+  },
   "dependencies": {
     "@angular/common": "4.4.3",
     "@angular/compiler": "4.4.3",
@@ -32,6 +46,9 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.0.0",
+    "electron": "^1.7.9",
+    "electron-builder": "^19.37.2",
+    "foreman": "^2.0.0",
     "typescript": "2.3.4"
   },
   "description": "An Ionic project"
